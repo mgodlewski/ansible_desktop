@@ -1,0 +1,8 @@
+- apt:
+    name: git
+
+- template:
+    src: .gitconfig
+    dest: "{{ansible_env.HOME}}/.gitconfig"
+    backup: true
+    

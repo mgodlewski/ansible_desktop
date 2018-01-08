@@ -1,2 +1,4 @@
 - import_tasks: nemo.yml
 
+- import_tasks: git.yml
+

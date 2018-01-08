@@ -1,0 +1,40 @@
+[color]
+	ui = true
+[alias]
+	last = cat-file commit HEAD
+	cm = commit -a -m\"[refactor] code mort\"
+	format = commit -a -m\"[refactor] format\"
+	rename = commit -a -m\"[refactor] renommage\"
+	duplication = commit -a -m\"[refactor] code mort : duplication\"
+	st = status -s
+	co = checkout
+	ci = commit
+	br = branch -a -v
+	rb = rebaseé"&é&é&é"
+	rbi = rebase -i
+	log-stats = log --stat
+	pretty-log = log --oneline --date-order --graph --all --decorate
+	topo-log = log --oneline --graph --all --decorate
+	t = log --oneline --graph --all --decorate --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%an %cr)%Creset' -15
+	spull = !git-svn fetch && git-svn rebase
+	spush = !git-svn dcommit --rmdir
+	diff = diff -p --stat
+    standup = log --since yesterday --oneline --author mgodlewski
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    lg = log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%an %cr)%Creset'
+[core]
+	editor = vim
+   	autocrlf = input
+   	safecrlf = true
+[user]
+{% if git_email is defined %}	email = {{git_email}}
+{%endif%}
+{% if git_name is defined %}	name = {{git_name}}
+{%endif%}
+{% if git_signingkey is defined %}	signingkey = {{git_signingkey}}
+{%endif%}
+[push]
+  default = tracking
+[pull]
+  rebase = true
