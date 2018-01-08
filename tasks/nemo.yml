@@ -1,0 +1,11 @@
+- apt:
+    name: nemo
+
+- name: Check no-desktop
+  command: gsettings get org.gnome.desktop.background show-desktop-icons
+  register: nemo_show_desktop_icon
+  check_mode: no
+
+- name: Set no-desktop
+  command: gsettings set org.gnome.desktop.background show-desktop-icons false
+  when: nemo_show_desktop_icon.stdout != 'false'
