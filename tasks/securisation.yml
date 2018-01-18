@@ -1,0 +1,10 @@
+- lineinfile:
+    path: /etc/modprobe.d/blacklist.conf
+    line: blacklist firewire-core 
+  become: true
+
+- lineinfile:
+    path: /etc/modprobe.d/blacklist.conf
+    line: blacklist thunderbolt
+  become: true
+

@@ -18,6 +18,6 @@ Sample playbook:
 
 Ansible run:
 ``` shell
-ansible-playbook -i localhost, -c local playbook.yml  --diff
+ansible-playbook -i localhost, -c local playbook.yml --diff -K
 ```
 
