@@ -1,0 +1,11 @@
+- debug: var=ansible_become
+
+- blockinfile:
+    path: "{{bash_inputrc_path_become[ansible_become | default(false)]}}"
+    create: yes
+    marker: "# {mark} ANSIBLE"
+    block: |
+      # alternate mappings for "page up" and "page down" to search the history
+      "\e[5~": history-search-backward
+      "\e[6~": history-search-forward
+  

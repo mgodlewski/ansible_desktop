@@ -1,6 +1,7 @@
 # ansible_desktop
 Ansible role to install and configure my favorite tools for my destop computer:
 - git
+- bash preference (history shortcuts)
 - nemo (file manager)
 - i3 (coming)
 

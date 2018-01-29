@@ -4,3 +4,5 @@
 
 - import_tasks: securisation.yml
 
+- import_tasks: bash.yml
+
